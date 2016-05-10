@@ -1,0 +1,51 @@
+<div class="page-header">
+  <%= link_to new_equipment_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Equipment
+  <% end %>
+  <h1>Listing equipment</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Equipment Type</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Serial</th>
+            <th>Details</th>
+            <th>Alert</th>
+            <th>Date cad</th>
+            <th>Date buy</th>
+            <th>Item</th>
+            <th>Gear</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @equipment) do |equipment| %>
+            <td><%= equipment.equipmenttype %></td>
+            <td><%= equipment.name %></td>
+            <td><%= equipment.brand %></td>
+            <td><%= equipment.model %></td>
+            <td><%= equipment.color %></td>
+            <td><%= equipment.serial %></td>
+            <td><%= equipment.details %></td>
+            <td><%= equipment.alert %></td>
+            <td><%= equipment.date_cad %></td>
+            <td><%= equipment.date_buy %></td>
+            <td><%= equipment.item %></td>
+            <td><%= equipment.gear %></td>
+            <td><%= link_to 'Show', equipment %></td>
+        <td><%= link_to 'Edit', edit_equipment_path(equipment) %></td>
+        <td><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

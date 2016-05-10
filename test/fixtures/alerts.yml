@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  hasDoc: MyString
+  status: MyString
+  date_update: MyString
+  date_cad: MyString
+  item_id: 
+  account_id: 
+
+two:
+  date: MyString
+  hasDoc: MyString
+  status: MyString
+  date_update: MyString
+  date_cad: MyString
+  item_id: 
+  account_id: 

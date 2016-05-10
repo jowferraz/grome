@@ -1,0 +1,50 @@
+<div class="page-header">
+  <%= link_to equipment_index_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_equipment_path(@equipment), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show equipment</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Equipment Type:</dt>
+  <dd><%= @equipment.equipmenttype %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @equipment.name %></dd>
+
+  <dt>Brand:</dt>
+  <dd><%= @equipment.brand %></dd>
+
+  <dt>Model:</dt>
+  <dd><%= @equipment.model %></dd>
+
+  <dt>Color:</dt>
+  <dd><%= @equipment.color %></dd>
+
+  <dt>Serial:</dt>
+  <dd><%= @equipment.serial %></dd>
+
+  <dt>Details:</dt>
+  <dd><%= @equipment.details %></dd>
+
+  <dt>Alert:</dt>
+  <dd><%= @equipment.alert %></dd>
+
+  <dt>Date cad:</dt>
+  <dd><%= @equipment.date_cad %></dd>
+
+  <dt>Date buy:</dt>
+  <dd><%= @equipment.date_buy %></dd>
+
+  <dt>Item:</dt>
+  <dd><%= @equipment.item %></dd>
+
+  <dt>Gear:</dt>
+  <dd><%= @equipment.gear %></dd>
+
+</dl>

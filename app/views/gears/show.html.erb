@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to gears_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_gear_path(@gear), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show gear</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Gear Type:</dt>
+  <dd><%= @gear.geartype %></dd>
+
+  <dt>Model:</dt>
+  <dd><%= @gear.model %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @gear.name %></dd>
+
+  <dt>Serial:</dt>
+  <dd><%= @gear.serial %></dd>
+
+  <dt>Color:</dt>
+  <dd><%= @gear.color %></dd>
+
+  <dt>Brand:</dt>
+  <dd><%= @gear.brand %></dd>
+
+  <dt>Details:</dt>
+  <dd><%= @gear.details %></dd>
+
+  <dt>Date buy:</dt>
+  <dd><%= @gear.date_buy %></dd>
+
+  <dt>Alert:</dt>
+  <dd><%= @gear.alert %></dd>
+
+  <dt>Item:</dt>
+  <dd><%= @gear.item %></dd>
+
+  <dt>Account:</dt>
+  <dd><%= @gear.account %></dd>
+
+</dl>

@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to alerts_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_alert_path(@alert), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show alert</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Date:</dt>
+  <dd><%= @alert.date %></dd>
+
+  <dt>Hasdoc:</dt>
+  <dd><%= @alert.hasDoc %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @alert.status %></dd>
+
+  <dt>Date update:</dt>
+  <dd><%= @alert.date_update %></dd>
+
+  <dt>Date cad:</dt>
+  <dd><%= @alert.date_cad %></dd>
+
+  <dt>Item:</dt>
+  <dd><%= @alert.item %></dd>
+
+  <dt>Account:</dt>
+  <dd><%= @alert.account %></dd>
+
+</dl>

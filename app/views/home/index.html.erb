@@ -1,0 +1,9 @@
+<h1>Grome Home</h1>
+
+    <div>
+           <% if user_signed_in? %>
+            <%= link_to 'Account', "/accounts" %>
+            <% else %>
+            <%= link_to 'GO', "/user/sing_in" %>
+        <% end %>
+    </div>

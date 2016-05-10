@@ -1,0 +1,49 @@
+<div class="page-header">
+  <%= link_to new_gear_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Gear
+  <% end %>
+  <h1>Listing gears</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Gear Type</th>
+            <th>Model</th>
+            <th>Name</th>
+            <th>Serial</th>
+            <th>Color</th>
+            <th>Brand</th>
+            <th>Details</th>
+            <th>Date buy</th>
+            <th>Alert</th>
+            <th>Item</th>
+            <th>Account</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @gears) do |gear| %>
+            <td><%= gear.geartype %></td>
+            <td><%= gear.model %></td>
+            <td><%= gear.name %></td>
+            <td><%= gear.serial %></td>
+            <td><%= gear.color %></td>
+            <td><%= gear.brand %></td>
+            <td><%= gear.details %></td>
+            <td><%= gear.date_buy %></td>
+            <td><%= gear.alert %></td>
+            <td><%= gear.item %></td>
+            <td><%= gear.account %></td>
+            <td><%= link_to 'Show', gear %></td>
+        <td><%= link_to 'Edit', edit_gear_path(gear) %></td>
+        <td><%= link_to 'Destroy', gear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
