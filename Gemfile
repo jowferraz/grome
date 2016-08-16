@@ -45,5 +45,10 @@ group :development do
   gem 'spring'
   gem 'bootstrap-generators'
   gem 'devise'
+  gem 'paperclip', '~> 3.0'
+  #gem 'pg'
+  gem "sequel_pg", :require=>'sequel'
+  gem 'carrierwave-postgresql'
+  gem 'postgresql_lo_streamer'
 end
 

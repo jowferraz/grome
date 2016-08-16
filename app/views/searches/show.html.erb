@@ -1,0 +1,39 @@
+<div class="page-header">
+  <%= link_to searches_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+
+  <h1>Show search</h1>
+  <h2>
+  <% if @search.search_items.empty? %>
+  <p>No Records Found</p>
+  <% else %>
+  <% @search.search_items.each do |c| %>
+  </h2>
+</div>
+
+<dl class="dl-horizontal">
+  
+
+  <dt>Serial:</dt>
+  <dd><%= c.serial %></dd>
+
+  <dt>Model:</dt>
+  <dd><%= c.model %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= c.name %></dd>
+
+  <dt>Brand:</dt>
+  <dd><%= c.brand %></dd>
+
+  <dt>Color:</dt>
+  <dd><%= c.color %></dd>
+
+  <dt>Details:</dt>
+  <dd><%= c.details %></dd>
+
+</dl>
+<% end %>
+<% end %>

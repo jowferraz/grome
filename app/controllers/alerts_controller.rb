@@ -25,6 +25,8 @@ class AlertsController < ApplicationController
   # POST /alerts.json
   def create
     @alert = Alert.new(alert_params)
+    @alert.item_id = current_user.account.items.ids
+    @alert.account_id = current_user.account.id
 
     respond_to do |format|
       if @alert.save

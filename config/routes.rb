@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :searches
   resources :equipment
   resources :gears
   resources :alerts
@@ -61,4 +62,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root :to => 'home#index'
+  mount PostgresqlLoStreamer::Engine => '/gear_image'
 end

@@ -10,6 +10,7 @@ class CreateGears < ActiveRecord::Migration
       t.string :details
       t.string :date_buy
       t.string :alert
+      t.string :image_file_name
       t.references :item, index: true, foreign_key: true
       t.references :account, index: true, foreign_key: true
 

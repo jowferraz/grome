@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :need_register, except: [:index]
+  
 
   # GET /items
   # GET /items.json
@@ -20,23 +22,30 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
   end
+  
 
   # POST /items
   # POST /items.json
   def create
     @item = Item.new(item_params)
     @item.user_id = current_user.id
-    @item.account_id = item.account.id
-
-    respond_to do |format|
-      if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render :show, status: :created, location: @item }
-      else
-        format.html { render :new }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
-      end
+    @item.account_id = current_user.account.id
+    
+    if @item.itemtp == "GEAR"
+      redirect_to new_gear_path
+    else
+      redirect_to new_equipment_path
     end
+    
+  #  respond_to do |format|
+   #   if @item.save
+  #      format.html { redirect_to @item, notice: 'Item was successfully created.' }
+  #      format.json { render :show, status: :created, location: @item }
+  #    else
+  #      format.html { render :new }
+  #      format.json { render json: @item.errors, status: :unprocessable_entity }
+  #    end
+  #  end
   end
 
   # PATCH/PUT /items/1
@@ -71,6 +80,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:itemtype, :date_cad, :alert, :status)
+      params.require(:item).permit(:itemtp, :date_cad, :alert, :status, :user_id, :account_id)
     end
 end

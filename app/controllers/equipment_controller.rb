@@ -25,6 +25,8 @@ class EquipmentController < ApplicationController
   # POST /equipment.json
   def create
     @equipment = Equipment.new(equipment_params)
+    @equipment.item_id = current_user.items.ids
+    @equipment.gear_id = current_user.account.id
 
     respond_to do |format|
       if @equipment.save

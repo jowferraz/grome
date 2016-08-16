@@ -9,7 +9,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.string :zipcode
       t.string :country
       t.string :accept_terms
-      t.references :user, index: true, foreign_key: true
+      t.references :users, :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end

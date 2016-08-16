@@ -6,7 +6,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
   config.action_mailer.default_url_options = { host: 'grome-jowferraz.c9users.io' }
-
+  Paperclip.options[:command_path] = "/usr/bin/"
   # Do not eager load code on boot.
   config.eager_load = false
 

@@ -21,6 +21,7 @@
             <th>Alert</th>
             <th>Item</th>
             <th>Account</th>
+            <th>Imagem</th>
             <th></th>
         <th></th>
         <th></th>
@@ -38,8 +39,9 @@
             <td><%= gear.details %></td>
             <td><%= gear.date_buy %></td>
             <td><%= gear.alert %></td>
-            <td><%= gear.item %></td>
-            <td><%= gear.account %></td>
+            <td><%= gear.item_id %></td>
+            <td><%= gear.account_id %></td>
+            <td><%= gear.image_file_name %></td>
             <td><%= link_to 'Show', gear %></td>
         <td><%= link_to 'Edit', edit_gear_path(gear) %></td>
         <td><%= link_to 'Destroy', gear, method: :delete, data: { confirm: 'Are you sure?' } %></td>

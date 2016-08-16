@@ -25,6 +25,8 @@ class GearsController < ApplicationController
   # POST /gears.json
   def create
     @gear = Gear.new(gear_params)
+    @gear.item_id = current_user.items.ids
+    @gear.account_id = current_user.account.id
 
     respond_to do |format|
       if @gear.save
@@ -69,6 +71,7 @@ class GearsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gear_params
-      params.require(:gear).permit(:geartype, :model, :name, :serial, :color, :brand, :details, :date_buy, :alert, :item_id, :account_id)
+      params.require(:gear).permit(:geartype, :model, :name, :serial, :color, 
+      :brand, :details, :date_buy, :alert, :item_id, :account_id, :image)
     end
 end

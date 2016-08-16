@@ -4,6 +4,28 @@
     New Item
   <% end %>
   <h1>Listing items</h1>
+  <h2>
+    <tr>
+  <%= form_tag items_path, :method => "get" do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Itens" %>
+  <%= submit_tag "Search"%>
+  <% end %>
+  </tr>
+  </h2>
+  <h3 class="searchLinks">
+  <tr>
+    <%= link_to "Custom Search" + " /", new_search_path %>
+  </tr>
+  <tr>
+    <%= link_to "Saved Searches", "searches" %>
+  </tr>
+  </h3>
+  <h4>
+  <tr>
+    <%= link_to "Alert", "alerts" %>
+  </tr>
+  </h4>
+  
 </div>
 
 <div class="table-responsive">
@@ -11,22 +33,24 @@
     <thead>
       <tr>
             <th>Item Type</th>
-            <th>Date cad</th>
-            <th>Alert</th>
+            <th>name</th>
+            <th>brand</th>
+            <th>model</th>
+            <th>color</th>
             <th>Status</th>
-            <th></th>
-        <th></th>
-        <th></th>
       </tr>
     </thead>
 
     <tbody>
       <%= content_tag_for(:tr, @items) do |item| %>
-            <td><%= item.itemtype %></td>
-            <td><%= item.date_cad %></td>
+            <td><%= item.itemtp %></td>
             <td><%= item.alert %></td>
             <td><%= item.status %></td>
             <td><%= link_to 'Show', item %></td>
+            
+           
+        
+            
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>

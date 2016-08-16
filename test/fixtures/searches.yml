@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  itemtp: MyString
+  serial: MyString
+  model: MyString
+  name: MyString
+  brand: MyString
+  color: MyString
+  details: MyString
+  references: 
+
+two:
+  itemtp: MyString
+  serial: MyString
+  model: MyString
+  name: MyString
+  brand: MyString
+  color: MyString
+  details: MyString
+  references: 
